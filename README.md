@@ -2,6 +2,9 @@
 
 This repository provides helper modules and packages for using [log/slog](https://pkg.go.dev/log/slog) effectively.
 
+[![Go Reference](https://pkg.go.dev/badge/github.com/goaux/slog/logger.svg)](https://pkg.go.dev/github.com/goaux/slog/logger)
+[![Go Report Card](https://goreportcard.com/badge/github.com/goaux/slog/logger)](https://goreportcard.com/report/github.com/goaux/slog/logger)
+
 ## github.com/goaux/slog/logger
 
 Package logger is a placeholder package for creating and using a project-specific [slog.Logger][] across all modules in a program.
