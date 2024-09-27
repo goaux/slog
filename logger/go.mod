@@ -1,6 +1,6 @@
 module github.com/goaux/slog/logger
 
-go 1.23.1
+go 1.21.13
 
 require (
 	github.com/goaux/funcname v1.0.0
