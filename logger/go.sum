@@ -1,6 +1,8 @@
 github.com/goaux/funcname v1.0.0 h1:J13BLakgrJ5AVRu10rcdxK3xZO521yi5JyF7cbyOkuw=
 github.com/goaux/funcname v1.0.0/go.mod h1:F8QT39RSK/wvKGs/aEZi1rNY4ts+KuGpu74qurcvBZQ=
-github.com/goaux/results v1.6.1 h1:mTNUhLxs9T98YWP87Dji+A9s0ZfzHDoKd+C9oyVP2cc=
-github.com/goaux/results v1.6.1/go.mod h1:SfCxQPedrX5L1dOcJp4Wa31UmDl225Q9qncdrlHHOYY=
+github.com/goaux/results v1.8.0 h1:gqVuP3MMi8cxp3gruioQSDjokXn/jvFnidBdQLJJxy4=
+github.com/goaux/results v1.8.0/go.mod h1:QoKjydZ3jM8slAcJzVOtgWfcw0D3/BCf1JSsqetJXgo=
+github.com/goaux/slog/slogctx v1.0.0 h1:HhIA0DRsjiudptgVvoIuAKXwFMcqh5VZ3YkbI63WawI=
+github.com/goaux/slog/slogctx v1.0.0/go.mod h1:lA1+XOLMOhQSBx/wzNlplElcaDpwIcMpekpbSFEAR0E=
 github.com/goaux/stacktrace v1.0.3 h1:KUIt4D6lTIpmyrVyhQtzYSvtDxN1tigNcH3xt1BSYzo=
 github.com/goaux/stacktrace v1.0.3/go.mod h1:JphATKwXM5g3x3y7mvb0zbxUJYzHlkMYuGPntIRW/LA=

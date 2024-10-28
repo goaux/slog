@@ -38,6 +38,7 @@ import (
 	"sync"
 
 	"github.com/goaux/funcname"
+	"github.com/goaux/slog/slogctx"
 	"github.com/goaux/stacktrace"
 )
 
@@ -49,6 +50,8 @@ func New() (*slog.Logger, error) {
 
 // NewName returns a [slog.Logger] configured with the environment variable.
 // If name is not empty, NewName returns the result of calling [slog.Logger.With]([slog.String]("logger", name))
+//
+// The handler of the logger returned includes [slogctx.Handler] that automatically emits logging attribute attached to the context.
 //
 // # Environment Variable
 //
@@ -179,7 +182,7 @@ func newRoot() (*slog.Logger, error) {
 	case "discard":
 		return slog.New(discardHandler{}), nil
 	case "default":
-		return slog.Default(), nil
+		return slog.New(slogctx.NewHandler(slog.Default().Handler())), nil
 	default:
 		return nil, fmt.Errorf("unknown logger=`%s`", name)
 	}
@@ -196,9 +199,9 @@ func newRoot() (*slog.Logger, error) {
 
 	switch name {
 	case "json":
-		return slog.New(slog.NewJSONHandler(output, options)), nil
+		return slog.New(slogctx.NewHandler(slog.NewJSONHandler(output, options))), nil
 	case "text":
-		return slog.New(slog.NewTextHandler(output, options)), nil
+		return slog.New(slogctx.NewHandler(slog.NewTextHandler(output, options))), nil
 	}
 	return nil, fmt.Errorf("unknown logger=`%s`", name)
 }
