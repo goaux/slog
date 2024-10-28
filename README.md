@@ -35,3 +35,7 @@ will use your project-specific logger instead of this placeholder package.
 [slog.Logger]: https://pkg.go.dev/log/slog#Logger
 [New]: https://pkg.go.dev/github.com/goaux/slog/logger#New
 [NewName]: https://pkg.go.dev/github.com/goaux/slog/logger#NewName
+
+## github.com/goaux/slog/slogctx
+
+Package slogctx provides context-aware attribute management for the standard [log/slog] package.
