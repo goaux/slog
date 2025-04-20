@@ -39,7 +39,7 @@ import (
 
 	"github.com/goaux/funcname"
 	"github.com/goaux/slog/slogctx"
-	"github.com/goaux/stacktrace"
+	"github.com/goaux/stacktrace/v2"
 )
 
 // New returns the result of calling [NewName](<package-name-of-caller>).
@@ -149,7 +149,7 @@ var defaultLogger = "json?output=stderr&level=error&addSource=true"
 func newName(name string) (*slog.Logger, error) {
 	log, err := newRootOnce()
 	if err != nil {
-		return nil, stacktrace.With(err, stacktrace.Skip(2))
+		return nil, stacktrace.NewError(err, stacktrace.Callers(2))
 	}
 	if name != "" {
 		log = log.With(slog.String(nameKey, name))
